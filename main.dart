@@ -18,10 +18,12 @@ main() async {
 
   List<Map<String, dynamic>> linkMap = [];
 
-  for (var link in links) {
+ for (var link in links) {
+   link.text = link.text.replaceAll(new RegExp(r'\n\s+'),  ''); //Регулярное выражение чтобы убрать пробелы и переходы на новую строку
     linkMap.add({
       'title': link.text,
     });
+    
   }
   print(json.encode(linkMap)); //делаем енкод в JSOn
 
