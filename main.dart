@@ -8,7 +8,6 @@ import 'dart:io';
 main() async {
   var jsonFile = File('data.json');
   var sink = jsonFile.openWrite();
-  var result;
   var client = Client();
   Response response = await client.get('https://firebase.google.com/products/#develop-products'); //выбираем сайт
 
